@@ -1,0 +1,6 @@
+/// An amazing Variable
+$foo: green;
+
+div {
+  color: $foo;
+}

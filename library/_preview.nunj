@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ _self.title }}</title>
+  <link rel="stylesheet" type="text/css" href="{{ '/css/style.css' | path }}">
+</head>
+<body>
+
+{{ yield }}
+
+</body>
+</html>
