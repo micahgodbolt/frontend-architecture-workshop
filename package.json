@@ -5,14 +5,12 @@
     "fractal": "./node_modules/.bin/fractal start --sync",
     "sass": "node-sass sass/style.scss public/css/style.css -rw",
     "sassdoc": "sassdoc sass",
-    "tests": "./node_modules/.bin/wdio tests/config/wdio.conf.js"
+    "test": "./node_modules/.bin/wdio tests/config/wdio.conf.js",
+    "tests": "npm run fractal & selenium-standalone start & npm run test"
   },
   "dependencies": {
     "@frctl/fractal": "^1.0.8",
-    "@frctl/handlebars": "^1.0.1",
-    "@frctl/nunjucks": "^1.0.1",
-    "bluebird": "^3.4.1",
-    "casperjs": "^1.1.3",
+    "@frctl/handlebars": "^1.1.0",
     "chai": "^3.5.0",
     "chai-as-promised": "5.1.0",
     "gm": "^1.21.1",

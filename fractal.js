@@ -11,8 +11,10 @@ const path = require('path');
  */
 const fractal = module.exports = require('@frctl/fractal').create();
 
-fractal.components.engine('@frctl/nunjucks');
-fractal.components.set('ext', '.nunj')
+
+const layouts = require('handlebars-layouts');
+
+layouts.register(fractal.components.engine().handlebars);
 
 /*
  * Give your project a title.
