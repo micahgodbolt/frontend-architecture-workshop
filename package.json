@@ -2,10 +2,12 @@
   "name": "generate-workshop",
   "version": "0.1.0",
   "scripts": {
-    "fractal": "./node_modules/.bin/fractal start --sync",
-    "sass": "node-sass sass/style.scss public/css/style.css -rw",
+    "fractal": "fractal start --sync",
+    "sass": "node-sass sass/style.scss public/css/style.css",
+    "sass:watch": "node-sass sass/style.scss public/css/style.css -rw",
+    "start": "npm run sass && npm run sass:watch & npm run fractal",
     "sassdoc": "sassdoc sass",
-    "test": "./node_modules/.bin/wdio tests/config/wdio.conf.js",
+    "test": "wdio tests/config/wdio.conf.js",
     "tests": "npm run fractal & selenium-standalone start & npm run test"
   },
   "dependencies": {

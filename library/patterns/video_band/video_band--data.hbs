@@ -1,0 +1,33 @@
+
+
+ {{#embed '@band'
+ layout="4 4 4"
+ }}
+
+    {{#content "header"}}
+      {{> '@band_header' }}
+    {{/content}}
+
+    {{#content "body"}}
+
+     {{#each images as |image|}}
+      {{#embed '@card'}}
+        {{#content "body"}}
+          {{> '@image_embed' }}
+        {{/content}}
+        {{#content "footer"}}
+          {{> '@cta' }}
+        {{/content}}
+      {{/embed}}
+     {{/each}}
+
+    {{/content}}
+
+    {{#content "footer"}}
+
+      {{> '@cta' }}
+
+    {{/content}}
+{{/embed}}
+
+

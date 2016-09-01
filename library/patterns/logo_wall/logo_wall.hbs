@@ -1,7 +1,7 @@
 
 
  {{#embed '@band'
- layout="4 4 4"
+ layout="gallery5"
  }}
 
     {{#content "header"}}
@@ -13,7 +13,7 @@
      
       {{#embed '@card'}}
         {{#content "body"}}
-          {{> '@video_embed' }}
+          {{> '@image_embed' }}
         {{/content}}
         {{#content "footer"}}
           {{> '@cta' }}
@@ -22,7 +22,7 @@
 
        {{#embed '@card'}}
         {{#content "body"}}
-          {{> '@video_embed' }}
+          {{> '@image_embed' }}
         {{/content}}
         {{#content "footer"}}
           {{> '@cta' }}
@@ -31,7 +31,25 @@
 
        {{#embed '@card'}}
         {{#content "body"}}
-          {{> '@video_embed' }}
+          {{> '@image_embed' }}
+        {{/content}}
+        {{#content "footer"}}
+          {{> '@cta' }}
+        {{/content}}
+      {{/embed}}
+
+      {{#embed '@card'}}
+        {{#content "body"}}
+          {{> '@image_embed' }}
+        {{/content}}
+        {{#content "footer"}}
+          {{> '@cta' }}
+        {{/content}}
+      {{/embed}}
+
+      {{#embed '@card'}}
+        {{#content "body"}}
+          {{> '@image_embed' }}
         {{/content}}
         {{#content "footer"}}
           {{> '@cta' }}
