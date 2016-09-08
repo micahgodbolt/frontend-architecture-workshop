@@ -1,6 +1,3 @@
-/// An amazing Variable
-$foo: blue;
-
-div {
-  color: $foo;
-}
+@import "base";
+@import "../library/components/band_header/band_header";
+@import "../library/components/cta/cta";

@@ -1,0 +1,36 @@
+%section-title {
+    font-size: pem(22);
+    margin-bottom: pem(20, 22);
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: $base-font-family;
+    color: color(red);
+    margin-top: 0;
+    line-height: 1.4;
+}
+
+%section-headline {
+    font-size: pem(32);
+    margin-bottom: pem(20, 32);
+    font-weight: 800;
+    font-family: $base-font-family;
+    text-transform: none;
+    color: color(black);
+    margin-top: 0;
+    line-height: 1.1;
+    a {
+        text-decoration: none;
+        color: inherit;
+        &:hover {
+            color: color(link);
+        }
+    }
+}
+
+%section-summary {
+  color: color(copy);
+  font-size: pem(22);
+  line-height: 1.38;
+  margin-top: 0;
+  font-family: $base-font-family;
+}
