@@ -1,29 +1,36 @@
-@mixin make-button($btn-color: color(red), $btn-text-color: color(white), $disabled: false) {
-    background-color: $btn-color;
-    color: $btn-text-color;
+/// Returns a button with proper styles
+/// @access public
+/// @param {String} $btn-color [red] Background color of the button
+/// @param {String} $btn-text-color [white] Text color of the button
+/// @param {Boolean} $disabled [false] If button is disabled
+/// @example Button Mixin
+///     @include make-button(black, gray2, true);
+
+@mixin make-button($btn-color: red, $btn-text-color: white, $disabled: false) {
+    background-color: color($btn-color);
+    color: color($btn-text-color);
     display: inline-block;
-    font-family: $base-font-family;
     border: none; // this fixes buttons elements with this style
     font-size: pem(16);
     padding: pem(9) pem(40);
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
-    @if $disabled != disabled {
-        transition: background 0.2s ease-in 0s;
-        cursor: pointer;
-        &:hover {
-            background-color: darken($btn-color, 6%);
-            color: $btn-text-color;
-            text-decoration: none;
-        }
-    }
     @if $disabled == true {
         pointer-events: none;
         cursor: default;
         &:hover {
-            background-color: $btn-color;
-            color: $btn-text-color;
+            background-color: color($btn-color);
+            color: color($btn-text-color);
+            text-decoration: none;
+        }
+    }
+    @else {
+        transition: background 0.2s ease-in 0s;
+        cursor: pointer;
+        &:hover {
+            background-color: darken($btn-color, 6%);
+            color: color($btn-text-color);
             text-decoration: none;
         }
     }

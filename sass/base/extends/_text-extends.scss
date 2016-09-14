@@ -1,4 +1,7 @@
-%section-title {
+/// Band Title
+/// Only used as the title of a Band
+/// @link http://localhost:3000/components/detail/band_header Band Title Used in Band Header
+%band-title {
   font-size: pem(22);
   margin-bottom: pem(20, 22);
   text-transform: uppercase;
@@ -11,7 +14,10 @@
   }
 }
 
-%section-headline {
+/// Band Headline
+/// Only used as the headline of a Band
+/// @link http://localhost:3000/components/detail/band_header Band Headline Used in Band Header
+%band-headline {
   font-size: pem(32);
   margin-bottom: pem(20, 32);
   font-weight: 800;
@@ -31,13 +37,9 @@
   }
 }
 
-%section-summary {
-  color: color(copy);
-  font-size: pem(22);
-  line-height: 1.38;
-  margin-top: 0;
-}
-
+/// Content Title
+/// A lower level title used for individual pieces of content
+/// @link http://localhost:3000/components/detail/video_embed Content title used in a Video Embed
 %content-title {
   font-size: pem(18);
   font-weight: 800;
@@ -51,6 +53,9 @@
   }
 }
 
+/// Content Paragraph
+/// A standard paragraph style used for basic content
+/// @link http://localhost:3000/components/detail/video_embed Content paragrah used in a Video Embed
 %content-paragraph {
   display: block;
   color: color(copy);

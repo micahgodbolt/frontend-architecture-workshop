@@ -3,4 +3,5 @@ npm-debug*
 node_modules
 tests/shots
 tests/diffs
-public
+public/css
+sassdoc

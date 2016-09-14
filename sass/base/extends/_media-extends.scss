@@ -1,3 +1,6 @@
+/// iFrame Eembed Container
+/// A container to hold a 16x9 iFrame video
+/// @link http://localhost:3000/components/detail/video_embed Iframe Embed Container is used on the Video Embed
 %iframe-embed-container {
   padding: 0 0 56.25%;
   height: 0;
@@ -11,12 +14,9 @@
   }
 }
 
-%default-media { // constrains media to container,
-  max-width: 100%;
-  height: auto;
-}
-
-
+/// Responsive Media
+/// Styles to make svg's and images fill their containers
+/// @link http://localhost:3000/components/detail/image_embed Responsive Media is used on the Image Embed
 %responsive-media { // used for assets that fill the width of their container
   width: 100%;
   height: auto;
