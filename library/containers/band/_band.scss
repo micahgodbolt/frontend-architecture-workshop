@@ -1,0 +1,37 @@
+.band {
+  @extend %vertical-containers;
+  padding: $band-padding 0;
+  max-width: 1200px;
+  &[data-background="gray"] {
+    background: color(gray2);
+  }
+  &--header {
+
+  }
+  &--body{
+    &[data-layout] {
+      margin-top: -2 * $gutter;
+      margin-left: -$gutter;
+      margin-right: -$gutter;
+      display: flex;
+      flex-wrap: wrap;
+      > * {
+        margin: 2 * $gutter $gutter 0;
+      }
+    }
+    &[data-layout="3up"] > * {
+      flex-basis: calc((100%/3) - #{$gutter * 2});
+    }
+    &[data-layout="4up"] > * {
+      flex-basis: calc((100%/4) - #{$gutter * 2});
+    }
+    &[data-layout="5up"] > * {
+      flex-basis: calc((100%/5) - #{$gutter * 2});
+    }
+
+
+  }
+  &--footer {
+
+  }
+}

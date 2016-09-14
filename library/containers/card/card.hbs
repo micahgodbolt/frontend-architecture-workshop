@@ -1,14 +1,20 @@
-<div class="card">
-  <div class="header">
-    {{#block 'header'}}
-    {{/block}}
-  </div>
-  <div class="body">
-    {{#block 'body'}}
-    {{/block}}
-  </div>
-  <div class="footer">
-    {{#block 'footer'}}
-    {{/block}}
-  </div>
+<div class="card" data-theme="{{theme}}">
+  {{#if (content "header")}}
+    <div class="card--header">
+      {{#block 'header'}}
+      {{/block}}
+    </div>
+  {{/if}}
+  {{#if (content "body")}}
+    <div class="card--body">
+      {{#block 'body'}}
+      {{/block}}
+    </div>
+  {{/if}}
+  {{#if (content "footer")}}
+    <div class="card--footer">
+      {{#block 'footer'}}
+      {{/block}}
+    </div>
+  {{/if}}
 </div>

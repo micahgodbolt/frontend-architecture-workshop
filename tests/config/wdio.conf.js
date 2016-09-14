@@ -14,7 +14,7 @@ exports.config = {
 
     coloredLogs: true,
 
-    baseUrl: "http://localhost:3000",
+    baseUrl: "http://localhost:3000/",
     //
     // Default timeout for all waitForXXX commands.
     waitforTimeout: 10000,

@@ -1,0 +1,67 @@
+%section-title {
+  font-size: pem(22);
+  margin-bottom: pem(20, 22);
+  text-transform: uppercase;
+  font-weight: 800;
+  color: color(red);
+  margin-top: 0;
+  line-height: 1.4;
+  [data-theme="dark"] & {
+    color: color(white);
+  }
+}
+
+%section-headline {
+  font-size: pem(32);
+  margin-bottom: pem(20, 32);
+  font-weight: 800;
+  text-transform: none;
+  color: color(black);
+  margin-top: 0;
+  line-height: 1.1;
+  a {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+        color: color(link);
+    }
+  }
+  [data-theme="dark"] & {
+    color: color(white);
+  }
+}
+
+%section-summary {
+  color: color(copy);
+  font-size: pem(22);
+  line-height: 1.38;
+  margin-top: 0;
+}
+
+%content-title {
+  font-size: pem(18);
+  font-weight: 800;
+  text-transform: none;
+  color: #252527;
+  margin-top: 0;
+  margin-bottom: pem(8,18);
+  line-height: 1.18;
+  [data-theme="dark"] & {
+    color: color(white);
+  }
+}
+
+%content-paragraph {
+  display: block;
+  color: color(copy);
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.44;
+  margin: 0 0 1em;
+  [data-theme="dark"] & {
+    color: color(white);
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

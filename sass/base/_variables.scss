@@ -1,5 +1,4 @@
-// Base Font Size
-$base-font-px: 18;
+$base-font-px: 16;
 
 // Base Font Family
 $base-font-family: "Overpass", Overpass, Helvetica, helvetica,  arial, sans-serif;
@@ -21,3 +20,4 @@ $colors: (
 $box-padding: 30px;
 $vertical-gutter: 30px;
 $band-padding: 60px;
+$gutter: $box-padding/2;

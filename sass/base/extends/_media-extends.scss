@@ -1,0 +1,25 @@
+%iframe-embed-container {
+  padding: 0 0 56.25%;
+  height: 0;
+  position: relative;
+  iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+}
+
+%default-media { // constrains media to container,
+  max-width: 100%;
+  height: auto;
+}
+
+
+%responsive-media { // used for assets that fill the width of their container
+  width: 100%;
+  height: auto;
+  display: block;
+}
+

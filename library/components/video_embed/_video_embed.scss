@@ -1,0 +1,22 @@
+.video-embed {
+  &--container {
+    margin-bottom: 1em;
+    [data-align="bleed"] & {
+        @extend %bleeding-container;
+    }
+    // external context - internal context - selector
+    [data-align="bleed"]:first-child & {
+      @extend %bleeding-container-top;
+    }
+  }
+  &--iframe {
+    @extend %iframe-embed-container;
+  }
+  &--title {
+    @extend %content-title;
+  }
+  &--description {
+    @extend %content-paragraph;
+  }
+}
+

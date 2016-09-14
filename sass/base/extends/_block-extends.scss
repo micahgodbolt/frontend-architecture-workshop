@@ -1,0 +1,36 @@
+%text-align-enabled {
+  &[data-align="left"] {
+    list-style-position: outside;
+    text-align: left;
+  }
+  &[data-align="right"] {
+    text-align: right;
+    list-style-position: inside;
+  }
+  &[data-align="center"] {
+    text-align: center;
+    list-style-position: inside;
+    // Removes padding from UL's in centered components
+    & > ul {
+      padding-left: 0;
+    }
+  }
+}
+
+
+%bleeding-container-top {
+  margin-top: -$box-padding;
+  margin-left: -$box-padding;
+  margin-right: -$box-padding;
+}
+
+%bleeding-container {
+  margin-left: -$box-padding;
+  margin-right: -$box-padding;
+}
+
+%vertical-containers {
+  > *:not(:last-child) {
+    margin-bottom: $vertical-gutter;
+  }
+}

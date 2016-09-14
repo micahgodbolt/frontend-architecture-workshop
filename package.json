@@ -2,13 +2,13 @@
   "name": "generate-workshop",
   "version": "0.1.0",
   "scripts": {
+    "sass": "node-sass --include-path scss sass/style.scss public/css/style.css",
+    "sass:watch": "nodemon -e scss -x \"npm run sass\"",
     "fractal": "fractal start --sync",
-    "sass": "node-sass sass/style.scss public/css/style.css",
-    "sass:watch": "node-sass sass/style.scss public/css/style.css -rw",
     "start": "npm run sass && npm run sass:watch & npm run fractal",
     "sassdoc": "sassdoc sass",
     "test": "wdio tests/config/wdio.conf.js",
-    "tests": "npm run fractal & selenium-standalone start & npm run test"
+    "tests": "npm run sass && fractal start & selenium-standalone start && npm run test"
   },
   "dependencies": {
     "@frctl/fractal": "^1.0.8",
@@ -24,5 +24,8 @@
     "selenium-standalone": "4.7.0",
     "webdrivercss": "2.0.0-beta-rc1",
     "webdriverio": "3.2.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.10.2"
   }
 }

@@ -1,3 +1,5 @@
+.DS_Store
+npm-debug*
 node_modules
 tests/shots
 tests/diffs

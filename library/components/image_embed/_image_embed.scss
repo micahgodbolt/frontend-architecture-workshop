@@ -1,0 +1,37 @@
+.image-embed {
+  // Image Tag container
+  &--container {
+    [data-align="bleed"] & {
+      @extend %bleeding-container;
+    }
+    // external context - internal context - selector
+    [data-align="bleed"]:first-child & {
+      @extend %bleeding-container-top;
+    }
+  }
+  // Image Tag
+  &--img {
+    max-width: 100%; // used when not 'full', but larger than container
+    display: block;
+    [data-align="full"] &, [data-align="bleed"] & {
+      @extend %responsive-media;
+    }
+
+    [data-align="left"] & {
+      margin-right: auto;
+    }
+    [data-align="right"] & {
+      margin-left: auto;
+    }
+    [data-align="center"] & {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    [data-align="reduced"] & {
+      @extend %responsive-media;
+      transform: scale(.75);
+    }
+
+  }
+}
