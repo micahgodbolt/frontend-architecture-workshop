@@ -9,7 +9,7 @@ module.exports = yeoman.Base.extend({
 
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the ' + chalk.red('Webrh') + ' generator!'
+      'Welcome to the ' + chalk.red('BEACSS') + ' generator!'
     ));
 
     var prompts = [
@@ -50,34 +50,34 @@ module.exports = yeoman.Base.extend({
 
       switch (this.props.type) {
         case "component":
-          var path = "library/components/" + this.props.name_underscore;
+          var path = "library/components/" + this.props.name_underscore + "/";
           break;
         case "container":
-          var path = "library/containers/" + this.props.name_underscore;
+          var path = "library/containers/" + this.props.name_underscore + "/";
           break;
         case "pattern":
-          var path = "library/patterns/" + this.props.name_underscore;
+          var path = "library/patterns/" + this.props.name_underscore + "/";
           break;
       }
 
       this.fs.copyTpl(
-        this.templatePath('/_component.hbs'),
-        this.destinationPath( path  + this.props.name_underscore + '.hbs'),
+        this.templatePath('_component.hbs'),
+        this.destinationPath( path + this.props.name_underscore + '.hbs'),
         {props: this.props}
       );
       this.fs.copyTpl(
-        this.templatePath('/docs/_component.docs.md'),
+        this.templatePath('_component.docs.md'),
         this.destinationPath( path + this.props.name_underscore + '.docs.md'),
         {props: this.props}
       );
       this.fs.copyTpl(
-        this.templatePath('/tests/_component.tests.js'),
+        this.templatePath('_component.tests.js'),
         this.destinationPath( path  + this.props.name_underscore + '.tests.js'),
         {props: this.props}
       );
       if (this.props.type == 'component' || this.props.type == 'container') {
         this.fs.copyTpl(
-          this.templatePath('/styles/_component.scss'),
+          this.templatePath('_component.scss'),
           this.destinationPath( path  + this.props.name_underscore + '.scss'),
           {props: this.props}
         );

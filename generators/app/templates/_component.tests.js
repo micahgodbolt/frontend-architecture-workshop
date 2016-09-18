@@ -12,7 +12,7 @@ describe("<%= props.name %> <%= props.type %>", function() {
 		return browser
 			.compareScreen("<%= props.name_underscore %>", {
 			  	name: "<%= props.type %>",
-			  	elem: ".rh-<%= props.name_dash %>",
+			  	elem: ".<%= props.name_dash %>",
 			  	screenWidth: [250, 600]
 			});
 	});
