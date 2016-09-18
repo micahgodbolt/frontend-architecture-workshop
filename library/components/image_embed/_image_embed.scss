@@ -11,8 +11,8 @@
   }
   // Image Tag
   &--img {
-    max-width: 100%; // used when not 'full', but larger than container
     display: block;
+    max-width: 100%; // used when not 'full', but larger than container
     [data-align="full"] &, [data-align="bleed"] & {
       @extend %responsive-media;
     }

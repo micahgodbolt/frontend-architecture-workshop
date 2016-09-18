@@ -18,8 +18,8 @@
 /// Styles to make svg's and images fill their containers
 /// @link http://localhost:3000/components/detail/image_embed Responsive Media is used on the Image Embed
 %responsive-media { // used for assets that fill the width of their container
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
 }
 

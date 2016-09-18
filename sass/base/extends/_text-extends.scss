@@ -29,11 +29,35 @@
     text-decoration: none;
     color: inherit;
     &:hover {
-        color: color(link);
+      color: color(link);
     }
   }
   [data-theme="dark"] & {
     color: color(white);
+  }
+}
+
+/// Headline Link
+/// A headline that is used for linkable content (blog titles etc)
+%headline-link {
+  color: color(link);
+  font-size: pem(22);
+  margin-bottom: pem(20, 22);
+  margin-top: 0;
+  font-family: $base-font-family;
+  font-weight: 400;
+  text-decoration: none;
+  line-height: 1.2;
+  a:hover &{
+    text-decoration: none;
+    color: color(copy);
+  }
+  [data-rh-theme="dark"] & {
+    color: color(white);
+    &:hover {
+    text-decoration: none;
+    color: color(link);
+    }
   }
 }
 
@@ -58,11 +82,11 @@
 /// @link http://localhost:3000/components/detail/video_embed Content paragrah used in a Video Embed
 %content-paragraph {
   display: block;
+  margin: 0 0 1em;
   color: color(copy);
   font-size: 1em;
   font-weight: normal;
   line-height: 1.44;
-  margin: 0 0 1em;
   [data-theme="dark"] & {
     color: color(white);
   }

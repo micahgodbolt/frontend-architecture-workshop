@@ -10,11 +10,11 @@
   }
   &--body{
     &[data-layout] {
+      display: flex;
+      flex-wrap: wrap;
       margin-top: -2 * $gutter;
       margin-left: -$gutter;
       margin-right: -$gutter;
-      display: flex;
-      flex-wrap: wrap;
       > * {
         margin: 2 * $gutter $gutter 0;
       }
@@ -28,8 +28,6 @@
     &[data-layout="5up"] > * {
       flex-basis: calc((100%/5) - #{$gutter * 2});
     }
-
-
   }
   &--footer {
 

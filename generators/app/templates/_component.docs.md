@@ -1,0 +1,2 @@
+## <%= props.name %> <%= props.type %>
+

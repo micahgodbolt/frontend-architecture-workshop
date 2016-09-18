@@ -1,9 +1,5 @@
-/// Removes the units from a value returning just the integer
-/// @access private
-/// @param {String} $num A united number like 3px or 1.2em
-/// @return {Number}
 @function strip-unit($num) {
-    @return $num / ($num * 0 + 1);
+  @return $num / ($num * 0 + 1);
 }
 
 /// Removes the units from a value returning just the integer
@@ -32,19 +28,19 @@
 ///         color: color(brand-primary, .7, $lighten: 10%);
 ///     }
 @function color($name, $opacity: 1, $lighten: 0, $darken: 0) {
-    $color: map-get($colors, $name);
-    @if $color != null {
-        @if $darken > 0 {
-            @return darken($color, $darken);
-        }
-        @elseif $lighten > 0 {
-            @return lighten($color, $lighten);
-        }
-        @else {
-            @return rgba($color, $opacity);
-        }
+  $color: map-get($colors, $name);
+  @if $color != null {
+    @if $darken > 0 {
+      @return darken($color, $darken);
+    }
+    @elseif $lighten > 0 {
+      @return lighten($color, $lighten);
     }
     @else {
-        @error "#{$name} is not a valid color";
+      @return rgba($color, $opacity);
     }
+  }
+  @else {
+    @error "#{$name} is not a valid color";
+  }
 }

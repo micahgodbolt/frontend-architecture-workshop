@@ -1,10 +1,10 @@
 .card {
-	@extend %vertical-containers;
-	padding: $box-padding;
-	&[data-theme="dark"] {
-		background: color(black);
-	}
-	&[data-theme="light"] {
-		background: color(white);
-	}
+  @extend %vertical-containers;
+  padding: $box-padding;
+  &[data-theme="dark"] {
+    background: color(black);
+  }
+  &[data-theme="light"] {
+    background: color(white);
+  }
 }

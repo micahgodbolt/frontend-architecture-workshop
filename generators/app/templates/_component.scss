@@ -1,0 +1,6 @@
+.<%= props.name_dash %> {
+	<% props.elements_dash.split(/\s*,\s*/).forEach(function(component) { %>&--<%= component %> {
+
+	}
+	<% }); %>
+}

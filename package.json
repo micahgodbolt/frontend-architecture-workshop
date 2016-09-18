@@ -8,7 +8,10 @@
     "fractal": "fractal start --sync",
     "compile": "npm run sass & npm run sassdoc",
     "start": "npm run sass:watch & npm run fractal & http-server sassdoc -p 3001",
-    "selenium": "selenium-standalone start",
+    "create": "yo ./generators/app",
+    "lint": "sass-lint -c .sass-lint.yml '**/*.scss' -v -q",
+    "selenium:install": "selenium-standalone install",
+    "selenium:start": "selenium-standalone start",
     "test": "wdio tests/config/wdio.conf.js"
   },
   "dependencies": {
@@ -25,6 +28,10 @@
     "nodemon": "^1.10.2",
     "sassdoc": "^2.1.20",
     "selenium-standalone": "4.7.0",
-    "webdrivercss": "2.0.0-beta-rc1"
+    "webdrivercss": "2.0.0-beta-rc1",
+    "yo": "^1.8.5"
+  },
+  "devDependencies": {
+    "sass-lint": "^1.9.1"
   }
 }

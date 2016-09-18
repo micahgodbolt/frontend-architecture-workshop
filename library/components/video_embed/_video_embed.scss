@@ -2,7 +2,7 @@
   &--container {
     margin-bottom: 1em;
     [data-align="bleed"] & {
-        @extend %bleeding-container;
+      @extend %bleeding-container;
     }
     // external context - internal context - selector
     [data-align="bleed"]:first-child & {
@@ -19,4 +19,3 @@
     @extend %content-paragraph;
   }
 }
-

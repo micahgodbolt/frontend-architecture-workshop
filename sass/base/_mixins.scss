@@ -7,31 +7,31 @@
 ///     @include make-button(black, gray2, true);
 
 @mixin make-button($btn-color: red, $btn-text-color: white, $disabled: false) {
-    background-color: color($btn-color);
-    color: color($btn-text-color);
-    display: inline-block;
-    border: none; // this fixes buttons elements with this style
-    font-size: pem(16);
-    padding: pem(9) pem(40);
-    font-weight: bold;
-    text-decoration: none;
-    text-transform: uppercase;
-    @if $disabled == true {
-        pointer-events: none;
-        cursor: default;
-        &:hover {
-            background-color: color($btn-color);
-            color: color($btn-text-color);
-            text-decoration: none;
-        }
+  display: inline-block;
+  background-color: color($btn-color);
+  color: color($btn-text-color);
+  border: none; // this fixes buttons elements with this style
+  font-size: pem(16);
+  padding: pem(9) pem(40);
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  @if $disabled == true {
+    pointer-events: none;
+    cursor: default;
+    &:hover {
+      background-color: color($btn-color);
+      color: color($btn-text-color);
+      text-decoration: none;
     }
-    @else {
-        transition: background 0.2s ease-in 0s;
-        cursor: pointer;
-        &:hover {
-            background-color: darken($btn-color, 6%);
-            color: color($btn-text-color);
-            text-decoration: none;
-        }
+  }
+  @else {
+    transition: background 0.2s ease-in 0s;
+    cursor: pointer;
+    &:hover {
+      background-color: darken($btn-color, 6%);
+      color: color($btn-text-color);
+      text-decoration: none;
     }
+  }
 }
