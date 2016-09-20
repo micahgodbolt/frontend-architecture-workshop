@@ -66,8 +66,8 @@ module.exports = yeoman.Base.extend({
         {props: this.props}
       );
       this.fs.copyTpl(
-        this.templatePath('_component.docs.md'),
-        this.destinationPath( path + this.props.name_underscore + '.docs.md'),
+        this.templatePath('_README.md'),
+        this.destinationPath( path + 'README.md'),
         {props: this.props}
       );
       this.fs.copyTpl(
