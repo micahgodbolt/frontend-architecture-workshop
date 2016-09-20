@@ -1,5 +1,7 @@
 ## Frontend Architecture Workshop
 
+[![Join the chat at https://gitter.im/fea-workshop/Lobby](https://badges.gitter.im/fea-workshop/Lobby.svg)](https://gitter.im/fea-workshop/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ### Getting Set Up
 
 `$ git clone https://github.com/micahgodbolt/frontend-architecture-workshop.git && cd frontend-architecture-workshop`
